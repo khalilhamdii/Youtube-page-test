@@ -155,9 +155,8 @@ body {
 #more {
   grid-area: more;
   background-color: #e66b24;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  display: inline-block;
+ 
 }
 #likebtns {
   grid-area: likebtns;
@@ -173,11 +172,23 @@ body {
 #like {
   grid-area: like;
   background-color: #6dec04;
+  text-align: right;
+  vertical-align:middle;
+ display:inline-block;
+
 }
 #dislike {
   grid-area: dislike;
   background-color: #e9e517;
+  text-align: right;
+  vertical-align:middle;
+ 
+  display:inline-block;
+  
+
+
 }
+
 
 #subscribe {
   display: grid;
@@ -185,11 +196,16 @@ body {
     "logo channelname channelname"
     "logo subbtn nbrofsub";
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr;
 }
-#logo {
+#channellogo {
   grid-area: logo;
   background-color: #6dec04;
+  width:100%;
+ 
+  background-image:url(/images/t-logo.jpg) ;
+  background-repeat:none;
+  background-size:cover;
 }
 #channelname {
   grid-area: channelname;
@@ -202,6 +218,9 @@ body {
 #nbrofsub {
   grid-area: nbrofsub;
   background-color: #4ebe2c;
+  text-align:center;
+  vertical-align:baseline;
+  
 }
 #likebtns img {
   height: 30px;
@@ -209,6 +228,7 @@ body {
   margin-top: 5px;
   opacity: 0.8;
   margin-right: 10px;
+  vertical-align:middle;
 }
 #sharebtns img {
   height: 30px;
@@ -216,4 +236,5 @@ body {
   margin-top: 5px;
   opacity: 0.8;
   margin-right: 10px;
+  vertical-align:middle;
 }
