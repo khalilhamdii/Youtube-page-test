@@ -108,3 +108,17 @@ body {
   width: 95%;
   height: 500px;
 }
+# section-2
+{
+  display:grid;
+  background-color: blueviolet;
+  width:100%;
+  grid-template-areas: ;
+  grid-template-rows:
+
+}
+ #subscribe
+{ 
+  flex:
+display:grid;
+}
