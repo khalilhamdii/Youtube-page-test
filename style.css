@@ -105,35 +105,35 @@ body {
 #section-2 {
   margin-top: 30px;
   display: grid;
-
+  background-color: white;
   width: 100%;
   height: auto;
   grid-template-areas:
     "title title"
     "subscribe  nbrofviews"
     "sharebtns  likebtns";
-  grid-template-rows: 2fr 3fr 3fr;
+  grid-template-rows: 1fr 2fr 2fr;
   grid-template-columns: 1fr 1fr;
 }
 #title {
   grid-area: title;
-  background-color: white;
 }
 #subscribe {
   grid-area: subscribe;
 }
 #nbrviews {
   grid-area: nbrofviews;
-  background-color: white;
+
   text-align: right;
-  font-size:20;
-  margin-bottom:2px;
+  font-size: 20;
+  margin-bottom: 2px;
   padding-top: 20%;
+  bottom: 0;
 }
 
 #sharebtns {
   grid-area: sharebtns;
-  background-color: white;
+
   display: grid;
   grid-template-areas: "addto share more";
 
@@ -142,28 +142,28 @@ body {
 }
 #addto {
   grid-area: addto;
-  background-color: white;
+
   display: flex;
   align-items: center;
   justify-content: left;
 }
 #share {
   grid-area: share;
-  background-color: white;
+
   display: flex;
   align-items: center;
   justify-content: left;
 }
 #more {
   grid-area: more;
-  background-color: white;
+
   display: flex;
   align-items: center;
   justify-content: left;
 }
 #likebtns {
   grid-area: likebtns;
-  background-color: white;
+
   display: grid;
   grid-template-areas: "like dislike";
 
@@ -174,14 +174,14 @@ body {
 }
 #like {
   grid-area: like;
-  background-color: white;
+
   text-align: right;
   vertical-align: middle;
   display: inline-block;
 }
 #dislike {
   grid-area: dislike;
-  background-color: white;
+
   text-align: right;
   vertical-align: middle;
 
@@ -198,7 +198,6 @@ body {
 }
 #channellogo {
   grid-area: logo;
-  background-color: white;
 }
 #channellogo img {
   height: 100px;
@@ -210,37 +209,34 @@ body {
   outline: invert none medium;
   border-width: 0px;
   border-style: none;
-  margin: 20x;
-  padding: 20px;
   border-color: white;
-  
+  margin-top: 5px;
 }
-
-  
-  
 
 #channelname {
   grid-area: channelname;
-  background-color: white;
-  padding-top:15%;
+  bottom: 0;
+  padding-top: 15%;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 10px;
 }
 #subbtn {
   grid-area: subbtn;
   text-align: center;
-  
 }
 #subbutton {
-  height: 50px;
-  width: auto;
+  height: auto;
+  width: 120;
   margin-top: 5px;
-  margin-right: 10px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 #nbrofsub {
   grid-area: nbrofsub;
-  background-color: white;
-  text-align: center;
-  vertical-align: baseline;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 #likebtns img {
   height: 30px;
@@ -261,4 +257,3 @@ body {
 #description {
   background-color: white;
 }
-
