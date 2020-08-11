@@ -96,7 +96,6 @@ body {
   flex: 1;
   background-color: red;
   margin: 10px;
-  display: flex;
   justify-content: center;
 }
 #col2 {
@@ -104,21 +103,59 @@ body {
   background-color: blue;
   margin: 10px;
 }
-#yvid {
-  width: 95%;
-  height: 500px;
-}
-# section-2
-{
-  display:grid;
+#section-2 {
+  margin-top: 30px;
+  display: grid;
   background-color: blueviolet;
-  width:100%;
-  grid-template-areas: ;
-  grid-template-rows:
-
+  width: 100%;
+  height: 150px;
+  grid-template-areas:
+    "title title"
+    "subscribe  nbrofviews"
+    "sharebtns  likebtns";
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
- #subscribe
-{ 
-  flex:
-display:grid;
+#title {
+  grid-area: title;
+  background-color: #8ca0ff;
+}
+#subscribe {
+  grid-area: subscribe;
+}
+#nbrviews {
+  grid-area: nbrofviews;
+  background-color: #ff64e5;
+}
+#sharebtns {
+  grid-area: sharebtns;
+  background-color: #8cffa0;
+}
+#likebtns {
+  grid-area: likebtns;
+  background-color: #5c685e;
+}
+#subscribe {
+  display: grid;
+  grid-template-areas:
+    "logo channelname channelname"
+    "logo subbtn nbrofsub";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+#logo {
+  grid-area: logo;
+  background-color: #6dec04;
+}
+#channelname {
+  grid-area: channelname;
+  background-color: #e9e517;
+}
+#subbtn {
+  grid-area: subbtn;
+  background-color: #e66b24;
+}
+#nbrofsub {
+  grid-area: nbrofsub;
+  background-color: #4ebe2c;
 }
