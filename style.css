@@ -7,6 +7,7 @@ body {
   font-family: "YouTube Noto", Roboto, arial, sans-serif;
   font-size: 13px;
   position: absolute;
+  color:gray;
 }
 #navbar {
   background-color: white;
@@ -54,6 +55,15 @@ body {
   width: 450px;
   height: 35px;
 }
+#langbar
+{
+  background-color: blue;
+  color:white;
+  margin-top:5px;
+}
+
+
+
 #box1 {
   display: flex;
   justify-content: space-between;
@@ -278,7 +288,7 @@ body {
 }
 #footer {
   box-sizing: border-box;
-  display: block;
+
   left: 0;
   right: 0;
   height: 100px;
@@ -286,8 +296,11 @@ body {
   bottom: 0px;
   margin-top: 20px;
   background-color: white;
+  padding-left: 3%;
 }
 #footer-btns {
+  
+  width:60%;
   box-sizing: border-box;
   display: grid;
   grid-gap: 15px;
@@ -298,23 +311,31 @@ body {
 }
 #footer-logo {
   grid-area: ftrlogo;
+  
 }
 #language-btn {
+  margin-top:20px;
   grid-area: lang;
 }
 #location-btn {
   grid-area: loc;
+  margin-top:20px;
 }
 #restricted-btn {
   grid-area: res;
+  margin-top:20px;
 }
 #help-btn {
   grid-area: help;
+  margin-top:20px;
+  
 }
 #history-btn {
   grid-area: history;
+  margin-top:20px;
 }
 .addtional-info {
+  width:30%;
   box-sizing: border-box;
   height: auto;
   padding-top: 0;
@@ -324,4 +345,25 @@ body {
 }
 .addtional-info a {
   text-decoration: none;
+ color:#1f1f1c;
+}
+.addtionalinfo 
+{
+  font-size:20px;
+  color:rgb(102, 93, 93);
+  font-weight:bolder;
+}
+#lowerlinks {
+  width:25%;
+  box-sizing: border-box;
+  height: auto;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 3fr;
+  grid-gap: 10px;
+}
+#lowerlinks a {
+  text-decoration: none;
+ color:#5a5a53;
+ font-size: 12px;
 }
