@@ -6,6 +6,7 @@ body {
     sans-serif;
   font-family: "YouTube Noto", Roboto, arial, sans-serif;
   font-size: 13px;
+  
 }
 #navbar {
   background-color: white;
@@ -264,4 +265,76 @@ body {
   background-color: white;
   margin-top: 15px;
   padding: 20px;
+}
+
+#showbtn
+{
+  width:100%;
+  height:20px;
+}
+#loadingicon
+{
+
+  align-content: center;
+  vertical-align:top;
+  padding:10% 50%;
+
+display:inline-flex;
+
+}
+#footer
+{box-sizing: border-box;
+  margin-top:35%;
+  
+
+}
+#footer-btns
+{ box-sizing: border-box;
+  display: grid;
+  grid-gap:15px;
+  grid-template-areas:
+    "ftrlogo lang  loc res help history";
+    
+  grid-template-rows:repeat(6,1fr);
+  grid-template-columns: 1fr ;
+}
+  #footer-logo {
+  
+    grid-area: ftrlogo;
+  }
+  #language-btn {
+    margin-top:20px;
+    grid-area: lang;
+  }
+  #location-btn {
+    margin-top:20px;
+    grid-area: loc;
+  }
+  #restricted-btn {
+    margin-top:20px;
+    grid-area: res;
+  }
+  #help-btn {
+    margin-top:20px;
+    grid-area: help;
+  }
+  #history-btn {
+    margin-top:20px;
+    grid-area: history;
+  }
+  .addtional-info
+  { box-sizing:border-box;
+    height:auto;
+    padding-top:0%;
+    margin-top:0%;
+    margin-bottom:100%;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-gap:10px;
+ 
+
+  }
+.addtional-info a
+{
+  text-decoration: none;
 }
