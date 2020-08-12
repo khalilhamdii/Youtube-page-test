@@ -103,17 +103,19 @@ body {
   background-color: blue;
 }
 #section-2 {
-  margin-top: 30px;
   display: grid;
   background-color: white;
-  width: 100%;
+  min-width: 0;
   height: auto;
   grid-template-areas:
     "title title"
     "subscribe  nbrofviews"
     "sharebtns  likebtns";
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 20% 60% 20%;
   grid-template-columns: 1fr 1fr;
+  margin-top: 15px;
+  padding: 5px 10px 5px 10px;
+  position: relative;
 }
 #title {
   grid-area: title;
@@ -122,13 +124,14 @@ body {
   grid-area: subscribe;
 }
 #nbrviews {
+  font-size: 19px;
+  color: rgb(102, 102, 102);
   grid-area: nbrofviews;
-
-  text-align: right;
   font-size: 20;
   margin-bottom: 2px;
-  padding-top: 20%;
+  position: absolute;
   bottom: 0;
+  right: 0;
 }
 
 #sharebtns {
@@ -200,8 +203,8 @@ body {
   grid-area: logo;
 }
 #channellogo img {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   background-color: transparent;
   font-size: 13px;
   display: inline-block;
@@ -210,7 +213,7 @@ body {
   border-width: 0px;
   border-style: none;
   border-color: white;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 #channelname {
@@ -234,12 +237,15 @@ body {
 }
 #nbrofsub {
   grid-area: nbrofsub;
-  text-align: left;
-  justify-content: center;
-  align-items: center;
+  margin-top: 13%;
+  margin-bottom: 18%;
+  margin-right: 50%;
+  padding: 7%;
+  background-color: rgb(226, 226, 226);
+  border-radius: 3px;
 }
 #likebtns img {
-  height: 30px;
+  height: 15px;
   width: auto;
   margin-top: 5px;
   opacity: 0.8;
@@ -247,7 +253,7 @@ body {
   vertical-align: middle;
 }
 #sharebtns img {
-  height: 30px;
+  height: 15px;
   width: auto;
   margin-top: 5px;
   opacity: 0.8;
@@ -256,4 +262,6 @@ body {
 }
 #description {
   background-color: white;
+  margin-top: 15px;
+  padding: 20px;
 }
