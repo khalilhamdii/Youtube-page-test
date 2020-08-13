@@ -128,6 +128,7 @@ body {
 }
 /* <==== */
 /* CSS Code of the navigation bar ends here */
+/* container holds the two columns col and col2 */
 #container {
   width: auto;
   margin-top: 20px;
@@ -140,23 +141,16 @@ body {
   min-height: 100%;
   margin-bottom: 10px;
 }
+/*where the video, comments and description is*/
 #col1 {
   flex: 1;
   margin-right: 15px;
   justify-content: center;
   min-width: 450px;
 }
-#col2 {
-  flex: 2;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  flex-wrap: nowrap;
-  padding: 15px 15px 10px 15px;
-  margin-bottom: 10%;
-  min-width: 350px;
-}
+/*end of col1*/
+/*suggested videos*/
+
 #section-2 {
   display: grid;
   background-color: white;
@@ -335,6 +329,45 @@ body {
   margin-top: 15px;
   padding: 20px;
 }
+
+#comments {
+  background-color: white;
+  margin-top: 15px;
+  padding: 30px;
+  color: rgb(118, 118, 118);
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#comments img {
+  opacity: 0.5;
+  margin-right: 10px;
+}
+#showbtn {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-top: 1px solid rgb(226, 226, 226);
+  background-color: white;
+  color: rgb(118, 118, 118);
+  font-weight: bold;
+  font-size: 10px;
+}
+/*end of col1*/
+/*The second column( suggested videos) */
+#col2 {
+  flex: 2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-wrap: nowrap;
+  padding: 15px 15px 10px 15px;
+  margin-bottom: 10%;
+  min-width: 350px;
+}
 .vid-container {
   display: flex;
   flex-direction: row;
@@ -478,31 +511,9 @@ input:checked + .slider:before {
   height: 20px;
   width: auto;
 }
-#showbtn {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-top: 1px solid rgb(226, 226, 226);
-  background-color: white;
-  color: rgb(118, 118, 118);
-  font-weight: bold;
-  font-size: 10px;
-}
-#comments {
-  background-color: white;
-  margin-top: 15px;
-  padding: 30px;
-  color: rgb(118, 118, 118);
-  font-weight: bold;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#comments img {
-  opacity: 0.5;
-  margin-right: 10px;
-}
+
+
+/*end of col2*/
 /* CSS code for the footer section */
 #footer {
   box-sizing: border-box;
