@@ -6,8 +6,6 @@ body {
     sans-serif;
   font-family: "YouTube Noto", Roboto, arial, sans-serif;
   font-size: 13px;
-  position: absolute;
-  color:gray;
 }
 #navbar {
   background-color: white;
@@ -38,9 +36,11 @@ body {
 .loop-icon img {
   height: 30px;
   width: auto;
+  margin-right: 15px;
   margin-top: 5px;
-  margin-right: 10px;
-  height: 35px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
 }
 .upload-icon img {
   height: 20px;
@@ -50,32 +50,23 @@ body {
   margin-right: 50px;
 }
 .searchbar {
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 450px;
-  height: 35px;
+  width: 550px;
+  height: 30px;
+  position: absolute;
+  border: none;
 }
-#langbar
-{
-  background-color: blue;
-  color:white;
-  margin-top:5px;
-}
-
-
-
 #box1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 #box2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  width: 500px;
-  background-color: rgb(216, 216, 216);
+  height: 30px;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-flex;
+  border: 1px solid rgb(199, 199, 199);
 }
 #box3 {
   display: flex;
@@ -95,12 +86,14 @@ body {
   border-radius: 2px;
 }
 #container {
-  margin: 20px 200px 200px 200px;
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 65% 35%;
   position: relative;
   min-width: 0px;
-  height: auto;
+  height: 150%;
 }
 #col1 {
   flex: 1;
@@ -109,7 +102,13 @@ body {
 }
 #col2 {
   flex: 2;
-  background-color: blue;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-wrap: nowrap;
+  padding: 15px 15px 10px 15px;
+  margin-bottom: 10%;
 }
 #section-2 {
   display: grid;
@@ -274,96 +273,146 @@ body {
   margin-top: 15px;
   padding: 20px;
 }
-
-#showbtn {
-  width: 100%;
-  height: 20px;
+.vid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding: 5px 0px 10px 0px;
+  cursor: pointer;
 }
-#loadingicon {
-  align-content: center;
-  vertical-align: top;
-  padding: 10% 50%;
-
-  display: inline-flex;
+.vid-container:hover {
+  cursor: pointer;
 }
-#footer {
-  box-sizing: border-box;
+.vid-description {
+  margin: 0px 5px 10px 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.vid-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.vid-details {
+  color: rgb(118, 118, 118);
+  line-height: 1.4em;
+}
+#show_more {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 550;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+#vid-1,
+#vid-20 {
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+.vid-img {
+  position: relative;
+  height: 100%;
+}
+.vid-duration {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 12px;
+  padding: 3px;
+}
+/* Toggle switch CSS code starts here */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+  float: right;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
   left: 0;
   right: 0;
-  height: 100px;
-  position: absolute;
-  bottom: 0px;
-  margin-top: 20px;
-  background-color: white;
-  padding-left: 3%;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-#footer-btns {
-  
-  width:60%;
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 15px;
-  grid-template-areas: "ftrlogo lang  loc res help history";
 
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: 1fr;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-#footer-logo {
-  grid-area: ftrlogo;
-  
+
+input:checked + .slider {
+  background-color: #2196f3;
 }
-#language-btn {
-  margin-top:20px;
-  grid-area: lang;
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
 }
-#location-btn {
-  grid-area: loc;
-  margin-top:20px;
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
 }
-#restricted-btn {
-  grid-area: res;
-  margin-top:20px;
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
 }
-#help-btn {
-  grid-area: help;
-  margin-top:20px;
-  
+
+.slider.round:before {
+  border-radius: 50%;
 }
-#history-btn {
-  grid-area: history;
-  margin-top:20px;
-}
-.addtional-info {
-  width:30%;
-  box-sizing: border-box;
-  height: auto;
-  padding-top: 0;
+/* Toggle switch CSS code ends here */
+
+.opt {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  grid-template-areas: "left_side right_side";
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10px;
 }
-.addtional-info a {
-  text-decoration: none;
- color:#1f1f1c;
+
+#left-side {
+  grid-area: left_side;
+  color: black;
+  font-weight: bold;
 }
-.addtionalinfo 
-{
-  font-size:20px;
-  color:rgb(102, 93, 93);
-  font-weight:bolder;
+#right-side {
+  grid-area: right_side;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
 }
-#lowerlinks {
-  width:25%;
-  box-sizing: border-box;
-  height: auto;
-  padding-top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr 3fr;
-  grid-gap: 10px;
+#tag-1 {
+  color: rgb(118, 118, 118);
+  font-weight: bold;
 }
-#lowerlinks a {
-  text-decoration: none;
- color:#5a5a53;
- font-size: 12px;
+#tag-2 img {
+  position: relative;
+  height: 20px;
+  width: auto;
 }
