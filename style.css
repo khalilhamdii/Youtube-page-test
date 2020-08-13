@@ -1,4 +1,6 @@
+html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: rgb(226, 223, 223);
@@ -7,6 +9,8 @@ body {
   font-family: "YouTube Noto", Roboto, arial, sans-serif;
   font-size: 13px;
 }
+/* CSS Code of the navigation bar starts here */
+/* ====> */
 #navbar {
   background-color: white;
   height: 50px;
@@ -18,9 +22,8 @@ body {
   padding-left: 50px;
   padding-right: 50px;
   align-items: center;
-  min-width: 0px;
 }
-
+/* Styling of the icons inside the navbar*/
 .list-icon img {
   height: 15px;
   width: auto;
@@ -49,17 +52,21 @@ body {
   opacity: 0.8;
   margin-right: 50px;
 }
+/* Styling of the searchbar */
 .searchbar {
-  width: 550px;
+  width: 90%;
   height: 30px;
   position: absolute;
   border: none;
 }
+/* box1 of the navbar contains Youtube logo and the list icon*/
 #box1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 20px;
 }
+/* box2 of the navbar contains the search bar and the loop icon*/
 #box2 {
   height: 30px;
   width: 600px;
@@ -67,7 +74,10 @@ body {
   position: relative;
   display: inline-flex;
   border: 1px solid rgb(199, 199, 199);
+  min-width: 450px;
+  margin-right: 20px;
 }
+/* box3 of the navbar contains the Sign In button  and the upload icon*/
 #box3 {
   display: flex;
   justify-content: space-between;
@@ -85,20 +95,25 @@ body {
   border: none;
   border-radius: 2px;
 }
+/* <==== */
+/* CSS Code of the navigation bar ends here */
 #container {
+  width: auto;
   margin-top: 20px;
   margin-left: 200px;
   margin-right: 200px;
   display: grid;
   grid-template-columns: 65% 35%;
   position: relative;
-  min-width: 0px;
-  height: 150%;
+  min-width: 800px;
+  min-height: 100%;
+  margin-bottom: 10px;
 }
 #col1 {
   flex: 1;
   margin-right: 30px;
   justify-content: center;
+  min-width: 450px;
 }
 #col2 {
   flex: 2;
@@ -109,6 +124,7 @@ body {
   flex-wrap: nowrap;
   padding: 15px 15px 10px 15px;
   margin-bottom: 10%;
+  min-width: 350px;
 }
 #section-2 {
   display: grid;
@@ -124,12 +140,18 @@ body {
   margin-top: 15px;
   padding: 5px 10px 5px 10px;
   position: relative;
+  min-height: 150px;
 }
 #title {
   grid-area: title;
+  position: relative;
 }
-#subscribe {
-  grid-area: subscribe;
+#title span {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 500;
+  top: 20%;
+  left: 1%;
 }
 #nbrviews {
   font-size: 19px;
@@ -200,57 +222,57 @@ body {
 }
 
 #subscribe {
+  grid-area: subscribe;
   display: grid;
   grid-template-areas:
     "logo channelname channelname"
     "logo subbtn nbrofsub";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 45px 45px;
+  grid-template-columns: 90px 120px 1fr;
 }
 #channellogo {
   grid-area: logo;
+  position: relative;
 }
 #channellogo img {
-  height: 80px;
-  width: 80px;
-  background-color: transparent;
-  font-size: 13px;
-  display: inline-block;
-  vertical-align: middle;
-  outline: invert none medium;
-  border-width: 0px;
-  border-style: none;
-  border-color: white;
-  margin-top: 10px;
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
 }
 
 #channelname {
   grid-area: channelname;
-  bottom: 0;
-  padding-top: 15%;
-  font-weight: bold;
-  font-size: 16px;
-  margin-left: 10px;
+  position: relative;
 }
-#subbtn {
+#channelname span {
+  position: absolute;
+  font-weight: 500;
+  font-size: 14px;
+  left: 5%;
+  bottom: 5%;
+}
+#subbtn-container {
   grid-area: subbtn;
-  text-align: center;
+  position: relative;
 }
-#subbutton {
-  height: auto;
-  width: 120;
-  margin-top: 5px;
-  margin-left: 10px;
-  vertical-align: middle;
+#subbtn-container img {
+  position: absolute;
+  width: 95%;
+  height: 80%;
+  top: 5%;
+  left: 5%;
 }
 #nbrofsub {
   grid-area: nbrofsub;
-  margin-top: 13%;
-  margin-bottom: 18%;
-  margin-right: 50%;
-  padding: 7%;
-  background-color: rgb(226, 226, 226);
   border-radius: 3px;
+  position: relative;
+}
+#nbrofsub span {
+  position: absolute;
+  padding: 10px;
+  background-color: #fafafa;
 }
 #likebtns img {
   height: 15px;
@@ -418,65 +440,90 @@ input:checked + .slider:before {
 }
 #showbtn {
   width: 100%;
-  height: 20px;
+  height: 30px;
+  border: none;
+  border-top: 1px solid rgb(226, 226, 226);
+  background-color: white;
+  color: rgb(118, 118, 118);
+  font-weight: bold;
+  font-size: 10px;
 }
-#loadingicon {
-  align-content: center;
-  vertical-align: top;
-  padding: 10% 50%;
-
-  display: inline-flex;
+#comments {
+  background-color: white;
+  margin-top: 15px;
+  padding: 30px;
+  color: rgb(118, 118, 118);
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+#comments img {
+  opacity: 0.5;
+  margin-right: 10px;
+}
+/* CSS code for the footer section */
 #footer {
   box-sizing: border-box;
-
   left: 0;
   right: 0;
   height: 100px;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   margin-top: 20px;
   background-color: white;
   padding-left: 3%;
 }
 #footer-btns {
-  
-  width:60%;
+  width: 60%;
   box-sizing: border-box;
   display: grid;
   grid-gap: 15px;
   grid-template-areas: "ftrlogo lang  loc res help history";
-
+  background-color: white;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: 1fr;
 }
 #footer-logo {
   grid-area: ftrlogo;
-  
 }
 #language-btn {
-  margin-top:20px;
+  margin-top: 20px;
   grid-area: lang;
 }
 #location-btn {
   grid-area: loc;
-  margin-top:20px;
+  margin-top: 20px;
 }
 #restricted-btn {
   grid-area: res;
-  margin-top:20px;
+  margin-top: 20px;
 }
 #help-btn {
   grid-area: help;
-  margin-top:20px;
-  
+  margin-top: 20px;
+  min-width: 80px;
 }
+#footer-btns button {
+  background-color: #f8f8f8;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  height: 28px;
+  width: 80px;
+}
+#footer-btns select {
+  background-color: #f8f8f8;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  height: 28px;
+}
+
 #history-btn {
   grid-area: history;
-  margin-top:20px;
+  margin-top: 20px;
+  min-width: 100px;
 }
 .addtional-info {
-  width:30%;
+  width: 30%;
   box-sizing: border-box;
   height: auto;
   padding-top: 0;
@@ -486,16 +533,15 @@ input:checked + .slider:before {
 }
 .addtional-info a {
   text-decoration: none;
- color:#1f1f1c;
+  color: #1f1f1c;
 }
-.addtionalinfo 
-{
-  font-size:20px;
-  color:rgb(102, 93, 93);
-  font-weight:bolder;
+.addtionalinfo {
+  font-size: 20px;
+  color: rgb(102, 93, 93);
+  font-weight: bolder;
 }
 #lowerlinks {
-  width:25%;
+  width: 25%;
   box-sizing: border-box;
   height: auto;
   padding-top: 0;
@@ -505,6 +551,7 @@ input:checked + .slider:before {
 }
 #lowerlinks a {
   text-decoration: none;
- color:#5a5a53;
- font-size: 12px;
+  color: #5a5a53;
+  font-size: 12px;
 }
+/* CSS code for the footer section ends here */
