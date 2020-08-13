@@ -59,6 +59,40 @@ body {
   position: absolute;
   border: none;
 }
+#langbar
+{ display:flex;
+  justify-content:space-between;
+  background-color: blue;
+  color:white;
+  margin-top:5px;
+  font-weight: 900;
+  padding:50px,50px,50px,50px;
+}
+#choose
+{
+  display:inline-block;
+}
+
+#preflang
+{
+  display:flex;
+  justify-content: space-between;
+  border-color: blue;
+
+  border-style: solid;
+  font-weight:100;
+  border-width: 0.5px;;
+}
+
+#preflang a
+{
+  color:blue;
+  text-decoration: none;
+}
+
+
+
+
 /* box1 of the navbar contains Youtube logo and the list icon*/
 #box1 {
   display: flex;
